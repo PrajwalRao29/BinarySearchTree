@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class BinaryTreeMain {
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         MyBinaryTree b=new MyBinaryTree();
         b.add(56);
         b.add(30);
@@ -16,5 +19,15 @@ public class BinaryTreeMain {
         b.add(67);
         b.display();
         System.out.println("THE SIZE OF THE TREE IS "+b.size());
+        System.out.println("Enter the element you want to search");
+        int data=sc.nextInt();
+        if(b.search(data))
+        {
+            System.out.println("Search Successful");
+        }
+        else
+        {
+            System.out.println("Search Not Successful");
+        }
     }
 }
